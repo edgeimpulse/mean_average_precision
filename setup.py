@@ -26,11 +26,11 @@ from setuptools import setup, find_packages
 
 readme = open('README.md').read()
 
-VERSION = '0.0.2.2'
+VERSION = '0.0.2.3'
 
 requirements = [
     'numpy',
-    'pandas~=1.5.3'
+    'pandas^=1'
 ]
 
 setup(
