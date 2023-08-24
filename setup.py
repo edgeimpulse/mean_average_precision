@@ -30,7 +30,7 @@ VERSION = '0.0.2.3'
 
 requirements = [
     'numpy',
-    'pandas^=1'
+    'pandas==1.*'
 ]
 
 setup(
