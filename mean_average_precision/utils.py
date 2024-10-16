@@ -42,8 +42,8 @@ def compute_precision_recall(tp, fp, n_positives):
         precision (np.array)
         recall (np.array)
     """
-    tp = np.cumsum(tp)
-    fp = np.cumsum(fp)
+    tp = sum(tp)
+    fp = sum(fp)
     recall = tp / max(float(n_positives), 1)
     precision = tp / np.maximum(tp + fp, np.finfo(np.float64).eps)
     return precision, recall

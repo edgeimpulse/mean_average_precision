@@ -158,10 +158,10 @@ class MeanAveragePrecision2d(MetricBase):
                 mpolicy
             )
             if res == 'tp':
-                tp[d] = 1
+                tp[d] += 1
                 matched_ind[img_id].append(idx)
             elif res == 'fp':
-                fp[d] = 1
+                fp[d] += 1
         precision, recall = compute_precision_recall(tp, fp, self.class_counter[:, class_id].sum())
         if recall_thresholds is None:
             average_precision = compute_average_precision(precision, recall)
